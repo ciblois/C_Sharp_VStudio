@@ -6,7 +6,7 @@ namespace Test03
     {
         static void Main(string[] args)
         {
-            int var1, var2, soma, sub, mult, div;
+            float var1, var2, soma, sub, mult, div;
 
             Console.WriteLine("Introduza o primeiro número: ");
             var1 = Convert.ToInt32(Console.ReadLine());
