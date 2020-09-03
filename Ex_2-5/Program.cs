@@ -14,7 +14,7 @@ namespace Ex_2_5
             string operation;
 
             Console.WriteLine("Type the first number: ");
-            num1 = Convert.ToInt32(Console.ReadLine());
+            num1 = Convert.ToInt64(Console.ReadLine());
             Console.WriteLine("Type the second number: ");
             num2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Type the operation you would like to do.");
