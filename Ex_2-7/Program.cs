@@ -19,25 +19,31 @@ namespace Ex_2_7
 
             Console.WriteLine("Let's check you car!");
 
-            float avg = 0.0f, tank = 0.0f, tank_price = 0.0f, liter_price = 0.0f, liter = 0.0f, money = 0.0f, dist = 0.0f;
+            double avg = 0, tank = 0, tank_price = 0, liter_price = 0, liter = 0, money = 0, dist = 0, avg_dist = 0, stops = 0, money_tot = 0 ;
           
             //Tem que usar vírgula. Se usar ponto não funciona.
             
             Console.WriteLine("Average car consumption per 100km: ");
-            avg = float.Parse(Console.ReadLine());
+            avg = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Fuel tank size in liters: ");
-            tank = Convert.ToSingle(Console.ReadLine());
+            tank = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Liter price in euros: ");
-            liter_price = Convert.ToSingle(Console.ReadLine());
+            liter_price = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("The distance to go: ");
+            dist = Convert.ToDouble(Console.ReadLine());
 
-            liter = avg * 100;
-            money = liter * liter_price;
+            liter = avg * 100; // quantos litros por 1km
+            money = liter * liter_price; // valor do gasto para 1km
             tank_price = tank * liter_price;
-            dist = tank/avg;
+            avg_dist = tank*100/liter;
+            stops = Math.Ceiling(dist/ avg_dist);
+            money_tot = stops*tank_price;
 
-            Console.WriteLine("The car consuption " + liter + " liters per 100km and it cust " + money + " euros.");
-            Console.WriteLine("The cust to full fill the tank is:  " + tank_price + " euros.");
-            Console.WriteLine("The average distance with full tank is:  " + dist + " km.");
+            Console.WriteLine("\n\n The car consuption " + liter + " liters per 100km and it cust " + money + " euros.");
+            Console.WriteLine("\n\n The cust to full fill the tank is:  " + tank_price + " euros.");
+            Console.WriteLine("\n\n The average distance with full tank is:  " + avg_dist + " km.");
+            Console.WriteLine("\n\n So you have to stop to " + stops + " times to refuel.");
+            Console.WriteLine("And spend " + money_tot + "euros.");
         }
     }
 }
