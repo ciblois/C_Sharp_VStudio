@@ -15,7 +15,7 @@ namespace Ex_4_1
             int j = i + 1;
 
             int sum = 0;
-            float mean = 0;
+            double mean = 0;
 
             while (i < size)
             {
@@ -43,7 +43,7 @@ namespace Ex_4_1
                 i++;
             }
 
-            mean = sum / size;
+            mean = Convert.ToDouble(sum / size);
             Console.WriteLine("\n\n The mean of ages is: " + mean);
 
             
