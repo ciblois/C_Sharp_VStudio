@@ -20,7 +20,7 @@ namespace Ex_4_4
 
             while (i < size)
             {
-                Console.WriteLine("Type one number. If you want to stop, type a negative number. ");
+                Console.WriteLine("Type 10 numbers: ");
                 num[i] = Convert.ToInt16(Console.ReadLine());
                 num_inv[size - 1 - i] = num[i];
                 i++;
